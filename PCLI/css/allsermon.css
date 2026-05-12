@@ -1,0 +1,440 @@
+
+        :root {
+    --primary-color: #1a2a6c;
+    --secondary-color: #b21f1f;
+    --accent-color: #fdbb2d;
+    --light-color: #f8f9fa;
+    --dark-color: #354034;
+    --text-color: #333;
+    --text-light: #f8f9fa;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.432);
+    --transition: all 0.3s ease;
+    --transition-slow: all 0.6s ease;
+}
+        
+        
+        
+        /* Services Section */
+        .services {
+            margin-top:-3rem;
+            width: 100%;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 4fr));
+            gap: 3rem;
+        }
+        
+        .service-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 1rem;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            width: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 20px 15px 40px rgba(0, 0, 0, 0.1);
+            border-color: midnightblue;
+            transition: aĺl 0.3s ease (2deg)
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            color: var(--primary-color);
+            transform: scale(1.1);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: midnightblue;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-20px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+        }
+
+.search-container {
+    margin: 2rem auto;
+    max-width: 600px;
+    animation: fadeIn 1s ease 0.6s both;
+}
+
+.search-box {
+    display: flex;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.search-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-box button {
+    background-color: var(--primary-color);
+    /* background-color: var(--accent-color); */
+    color: white;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-box button:hover {
+    /* background-color: var(--primary-color); */
+    background-color: var(--accent-color);
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.sermons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 2rem 0;
+}
+
+.sermon-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+    
+}
+
+
+.sermon-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sermon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.sermon-image {
+    height: 180px;
+    background-color: var(--light-color);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.sermon-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+}
+
+.sermon-year {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.sermon-content {
+    padding: 20px;
+}
+
+.sermon-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.sermon-preacher {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.sermon-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.audio-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.play-btn, .download-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.play-btn:hover, .download-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.play-btn i, .download-btn i {
+    margin-right: 5px;
+}
+/* 
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+} */
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+}
+
+.no-results {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 2rem;
+    color: #666;
+    display: none;
+}
+
+/* Audio Modal Styles */
+.audio-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s ease;
+}
+
+.audio-modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 25px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #aaa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    color: var(--dark-color);
+}
+
+#audio-player {
+    width: 100%;
+    margin: 15px 0;
+}
+
+#audio-modal-title {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+#audio-modal-preacher {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from { 
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sermons-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .audio-modal-content {
+        margin: 20% auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .search-box {
+        flex-direction: column;
+        border-radius: 8px;
+    }
+    
+    .search-box input {
+        border-radius: 8px 8px 0 0;
+    }
+    
+    .search-box button {
+        padding: 12px;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .audio-modal-content {
+        width: 95%;
+        padding: 20px 15px;
+    }
+}
+
+
+
+        @media (max-width: 560px)
+        {
+            .sermon-card
+            {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
+            gap: 1rem;
+            }
+        
+        }
+
+        

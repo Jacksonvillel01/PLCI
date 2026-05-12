@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give - Support Our Ministry | Prayerline Church International</title>
+    <meta name="description" content="Support Prayerline Church International through mobile money donations. Your generous giving helps us spread God's word and serve our community in Ghana.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="resources/images/logo.jpg" type="image/png">
+</head>
+<body>
+    <style>
+         #page-active
+     {
+        color:#fdbb2d;
+        font-weight: 900;
+     }
+    
+     .hero-section
+     {
+       background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+       padding: 45px;
+       margin-top: 40px;
+       border-radius: 12px;
+       border-left: 4px solid #3498db;
+       border-right: 4px solid #3498db;
+       width: 85%;
+       margin-left: 100px;
+     }
+    
+.hero-content h1
+{
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 20px;
+    font-size: 1.7rem;
+    margin-left: 30px;
+}
+.hero-content p
+{
+    margin: 0 0 20px 0;
+    padding-left: 30px;
+    font-style: italic;
+}
+@media (max-width: 768px)
+{
+      .hero-section
+     {
+       padding: 25px;
+       width: 80%;
+       margin-left: 50px;
+     }
+    
+}
+    
+    </style>
+    <div class="wrapper">
+        <header class="header">
+            <div class="logo-container">
+                <img src="resources/images/logo.jpg" alt="Prayerline Church International Logo" class="logo">
+                <h1>Prayerline Church <span>International</span></h1>
+            </div>
+            <nav class="nav">
+                <button class="mobile-toggle" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-list" data-visible="false">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="give.html" class="nav-link active" id="page-active">Give</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main-content">
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1>Support Our Ministry</h1>
+                    <p>Your generous giving helps us continue our mission to spread God's word and serve our community.</p>
+                </div>
+            </section>
+            <section id="donation" class="section">
+                <div class="donation-container">
+                    <div class="donation-content">
+                        <div class="donation-text">
+                            <h2>Give to Our Ministry</h2>
+                            <p>We accept donations through mobile money. Choose your network and copy the number to complete your gift.</p>
+                            <div class="mobile-money-options">
+                                <div class="mobile-money-card">
+                                    <div class="network-header">
+                                        <div class="network-icon mtn"><i class="fas fa-mobile-alt"></i></div>
+                                        <h2>MTN Mobile Money</h2>
+                                    </div>
+                                    <div class="account-details">
+                                        <p><strong>Account Name:</strong> Prayerline Church Int'l</p>
+                                        <p><strong>Phone Number:</strong> <span class="phone-number">+233 594 485 384</span></p>
+                                        <p><strong>Reference:</strong> Offering/Donation</p>
+                                    </div>
+                                    <button class="copy-btn" type="button" data-phone="+233594485384"><i class="fas fa-copy"></i> Copy Number</button>
+                                </div>
+                                <div class="mobile-money-card">
+                                    <div class="network-header">
+                                        <div class="network-icon vodafone"><i class="fas fa-mobile-alt"></i></div>
+                                        <h2>Telecel Cash</h2>
+                                    </div>
+                                    <div class="account-details">
+                                        <p><strong>Account Name:</strong> Prayerline Church Int'l</p>
+                                        <p><strong>Phone Number:</strong> <span class="phone-number">+233 202 254 025</span></p>
+                                        <p><strong>Reference:</strong> Offering/Donation</p>
+                                    </div>
+                                    <button class="copy-btn" type="button" data-phone="+233594485384"><i class="fas fa-copy"></i> Copy Number</button>
+                                </div>
+                                <!-- <div class="mobile-money-card">
+                                    <div class="network-header">
+                                        <div class="network-icon airtel"><i class="fas fa-mobile-alt"></i></div>
+                                        <h2>AirtelTigo Money</h2>
+                                    </div>
+                                    <div class="account-details">
+                                        <p><strong>Account Name:</strong> Prayerline Church Int'l</p>
+                                        <p><strong>Phone Number:</strong> <span class="phone-number">+233 594 485 384</span></p>
+                                        <p><strong>Reference:</strong> Offering/Donation</p>
+                                    </div>
+                                    <button class="copy-btn" type="button" data-phone="+233594485384"><i class="fas fa-copy"></i> Copy Number</button>
+                                </div> -->
+                            </div>
+                            <div class="giving-info">
+                                <h2>How to Give</h2>
+                                <ol>
+                                    <li>Dial *170# (MTN) or *110# (Vodafone).</li>
+                                    <li>Select "Transfer Money" or "Send Money".</li>
+                                    <li>Enter the phone number above.</li>
+                                    <li>Enter your donation amount.</li>
+                                    <li>Use "Offering/Donation" as reference.</li>
+                                    <li>Confirm the transfer.</li>
+                                </ol>
+                                <p class="thank-you">Thank you for your generous support</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- or *126# (AirtelTigo) -->
+                </div>
+            </section>
+        </main>
+
+        
+        <button id="backToTop" class="back-to-top" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+      
+    </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
